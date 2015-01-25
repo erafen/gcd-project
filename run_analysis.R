@@ -21,14 +21,12 @@ features <- read.csv(file="../project-dataset/features.txt",
                      col.names=c("index", "name"))
 
 # Read the training and test sets and merge them into the data frame
-cols = rep(16, 561)
-
 subjectTest <- read.table(file="../project-dataset/test/subject_test.txt", col.names=c("subject"))
 subjectTrain <- read.table(file="../project-dataset/train/subject_train.txt", col.names=c("subject"))
 subjects <- rbind(subjectTest, subjectTrain)
 
-xtest <- read.fwf(file="../project-dataset/test/X_test.txt", widths=cols, col.names=features$name)
-xtrain <- read.fwf(file="../project-dataset/train/X_train.txt", widths=cols, col.names=features$name)
+xtest <- read.table(file="../project-dataset/test/X_test.txt", col.names=features$name)
+xtrain <- read.table(file="../project-dataset/train/X_train.txt", col.names=features$name)
 variables <- rbind(xtest, xtrain)
 
 ytest <- read.table(file="../project-dataset/test/y_test.txt", col.names=c("activity"))
