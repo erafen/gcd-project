@@ -17,7 +17,7 @@ Finally the resulting dataset is written to [averages.txt](averages.txt)
 # Variables
 
 The resulting dataset contains the following variables:
-
+```
 subject
 activity
 tBodyAcc.mean...X
@@ -98,4 +98,5 @@ fBodyBodyGyroMag.std..
 fBodyBodyGyroMag.meanFreq..
 fBodyBodyGyroJerkMag.mean..
 fBodyBodyGyroJerkMag.std..
+```
 fBodyBodyGyroJerkMag.meanFreq..
